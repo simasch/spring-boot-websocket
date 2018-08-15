@@ -1,6 +1,7 @@
 package com.example.websocket.configuration;
 
 import com.example.websocket.boundary.EchoWebSocket;
+import com.example.websocket.entity.EchoRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
@@ -18,7 +19,7 @@ public class WebSocketConfiguration implements WebSocketConfigurer {
     }
 
     @Bean
-    public EchoWebSocket deviceServerEndpoint() {
+    public EchoWebSocket echoWebSocket() {
         return new EchoWebSocket();
     }
 
